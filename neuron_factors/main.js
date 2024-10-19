@@ -1,6 +1,6 @@
 const config = {
     type: Phaser.AUTO,
-    width: 800,
+    width: 600,
     height: 380,
     scene: {
         preload: preload,
@@ -118,6 +118,8 @@ function changeDishImage() {
             } else {
                 firstdish.setTexture('dish_fail'); // Reset or keep as dish1 for any other order
             }
+        } else if (droppedtubes[0] === 'LBL' || droppedtubes[0] === 'YLLW') {
+            firstdish.setTexture('dish_fail')
         }
     }
 }
