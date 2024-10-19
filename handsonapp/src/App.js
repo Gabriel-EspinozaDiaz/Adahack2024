@@ -16,7 +16,7 @@ function App() {
           <div className="element atom"></div>
           <div className="element dna"></div>
           <div className="element molecule"></div>
-
+          <div className="element cells"></div>
         </div>
 
       <h1 className="header">Minigames</h1>
