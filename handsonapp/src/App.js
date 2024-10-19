@@ -10,15 +10,19 @@ import './App.css';
 function App() {
     return (
       <div className="App">
-        <h1>Learn Biology with Interactive Minigames!!</h1>
         <div>
-            <Minigame1 />
+          <h1>Learn Biology with Interactive Minigames!!</h1>
         </div>
-        <div>
-            <Minigame2 />
-        </div>
-        <div>
-            <Minigame3 />
+        <div className="">
+            <div>
+                <Minigame1 />
+            </div>
+            <div>
+                <Minigame2 />
+            </div>
+            <div>
+                <Minigame3 />
+            </div>
         </div>
       </div>
     );
