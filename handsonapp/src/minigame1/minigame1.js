@@ -1,20 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useEffect, useRef } from 'react';
+import Phaser from 'phaser';
 
-import './minigame1.css';
+const Minigame1 = () => {
+  const gameContainerRef = useRef(null);
 
-// You will also find a css file in your minigame folder to create your own styles.
+  useEffect(() => {
+    const config = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      parent: gameContainerRef.current,
+      scene: {
+        preload: function () {
+          this.load.image('sky', 'sky.png');
+        },
+        create: function () {
+          this.add.image(400, 300, 'sky');
+        },
+        update: function () {
+          // Update logic here
+        }
+      }
+    };
 
-// The function below is what's called a React component, essentially it just represents some html code. 
-function Minigame1() {
+    const game = new Phaser.Game(config);
 
-    // This is a javascript file, so you can write any javascript you want for your minigame here.
-    
-    return (
-        // Put the html for your minigame in the div bellow
-      <div className = "body">
-      </div>
-    );
-  }
-  
+    // Cleanup Phaser instance on component unmount
+    return () => {
+      game.destroy(true);
+    };
+  }, []);
+
+  return <div ref={gameContainerRef} />;
+};
+
 export default Minigame1;
