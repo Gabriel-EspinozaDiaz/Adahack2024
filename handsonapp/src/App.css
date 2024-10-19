@@ -11,3 +11,119 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* General launch page container */
+.launch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #3b82f6, #9333ea, #16a34a);
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+}
+
+/* Floating elements container */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Floating atom, planet, and molecule animations */
+.element {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  animation: float 10s infinite ease-in-out;
+}
+
+.atom {
+  width: 120px;
+  height: 120px;
+  background-image: url('/public/atom.svg');
+  top: 10%;
+  left: 15%;
+}
+
+.dna {
+  width: 150px;
+  height: 150px;
+  background-image: url('/public/dna.svg');
+  top: 50%;
+  left: 25%;
+}
+
+.molecule {
+  width: 100px;
+  height: 100px;
+  background-image: url('/public/molecule.svg');
+  top: 70%;
+  left: 60%;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Centered content for the logo and start button */
+
+.element:hover {
+  transform: scale(1.2) rotate(10deg); /* Scale up and slightly rotate on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Soft glow on hover */
+}
+
+.center-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+}
+
+.game-logo {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  margin-bottom: 12vh;
+}
+
+.start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: #4ade80;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #10b981;
+}
