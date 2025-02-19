@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "phaser": "^3.86.0"},
+  "scripts": {
+    "build": "webpack", 
+    "start": "webpack serve --open" 
+  },
+  "devDependencies": {
+    "webpack": "^5.x.x",
+    "webpack-cli": "^4.x.x",
+    "webpack-dev-server": "^4.x.x",
+    "babel-loader": "^8.x.x",
+    "style-loader": "^3.x.x",
+    "css-loader": "^6.x.x"
+  }
+}

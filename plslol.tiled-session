@@ -1,0 +1,21 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "#tileset": {
+            "dynamicWrapping": false
+        },
+        "map_fr.tmx#tileset": {
+            "dynamicWrapping": false
+        }
+    },
+    "last.exportedFilePath": "/Users/kajakubickova/adahack_maybeagain",
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+    ],
+    "project": "plslol.tiled-project",
+    "recentFiles": [
+    ]
+}
